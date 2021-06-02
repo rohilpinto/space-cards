@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Planets from "./components/Planets";
 
 import "./style/App.css";
