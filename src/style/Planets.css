@@ -98,11 +98,13 @@
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
   justify-content: center;
+  
   margin-left: -30px; /* gutter size offset */
   width: auto;
 }
 .my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
+  padding: 20px;
+ 
   background-clip: padding-box;
 }
 
