@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;300;400;600;700&family=Poppins:wght@300;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* :root {
+	font-size: 16px;
+} */
+
+body {
+  font-family: "IBM Plex Serif", serif;
+
+  background: #ff00cc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #333399, #ac0089); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #333399, #ac0089); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* transition: all 0.4s ease-out; */
+}
+
+h1 {
+  font-weight: 700;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #00ffff;
+}
+.planets-parent {
+  margin-top: 20px;
+  padding: 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* .plane-comp {
+	display: flex;
+	flex-direction: row;
+} */
