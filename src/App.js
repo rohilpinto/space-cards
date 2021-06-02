@@ -1,6 +1,6 @@
 import React from "react";
 import Planets from "./components/Planets";
-import Masonry from "react-masonry-css";
+
 import "./style/App.css";
 
 const cardInfo = [
