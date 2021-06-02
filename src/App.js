@@ -1,6 +1,6 @@
 import React from "react";
 import Planets from "./components/Planets";
-
+import Masonry from "react-masonry-css";
 import "./style/App.css";
 
 const cardInfo = [
@@ -69,7 +69,8 @@ const App = () => {
       <div className="heading-container">
         <h1 className="heading">Planets</h1>
       </div>
-      <div className="planets-container">
+
+      <div className="planets-parent">
         <Planets planets={cardInfo}></Planets>
       </div>
     </React.Fragment>

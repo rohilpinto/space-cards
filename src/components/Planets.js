@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Masonry from "react-masonry-css";
 
 import "../style/Planets.css";
 
@@ -37,25 +38,33 @@ const Planets = ({ planets }) => {
     );
   };
 
+  const breakpoints = {
+    default: 3,
+    1100: 2,
+    700: 1,
+  };
+
   return (
     <React.Fragment>
-      {elements.map((planetMap) => {
-        const { id, img, planetName, planetDesc } = planetMap;
+      <Masonry breakpointCols={breakpoints} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
+        {elements.map((planetMap) => {
+          const { id, img, planetName, planetDesc } = planetMap;
 
-        return (
-          <div className="card" key={id}>
-            <img src={img} alt="" />
-            <h2>{planetName}</h2>
-            <ReadMore>{planetDesc}</ReadMore>
+          return (
+            <div className="card" key={id}>
+              <img src={img} alt="" />
+              <h2>{planetName}</h2>
+              <ReadMore>{planetDesc}</ReadMore>
 
-            <div className="btn-wrapper">
-              <button className="btn" onClick={() => removeCard(id)}>
-                Remove From list
-              </button>
+              <div className="btn-wrapper">
+                <button className="btn" onClick={() => removeCard(id)}>
+                  Remove From list
+                </button>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </Masonry>
     </React.Fragment>
   );
 };
