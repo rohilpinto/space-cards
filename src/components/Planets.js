@@ -48,9 +48,11 @@ const Planets = ({ planets }) => {
             <h2>{planetName}</h2>
             <ReadMore>{planetDesc}</ReadMore>
 
-            <button className="btn" onClick={() => removeCard(id)}>
-              Remove From list
-            </button>
+            <div className="btn-wrapper">
+              <button className="btn" onClick={() => removeCard(id)}>
+                Remove From list
+              </button>
+            </div>
           </div>
         );
       })}
