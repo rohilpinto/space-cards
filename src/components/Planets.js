@@ -2,16 +2,20 @@ import React, { useState } from "react";
 
 import "../style/Planets.css";
 
-const ReadMore = ({ children, Max }) => {
+const ReadMore = ({ children }) => {
   const [collapse, setCollapse] = useState(true);
 
-  const text = collapse ? children.slice(0, 100) : children.slice(0, 1000);
+  const text = collapse ? children.slice(0, 100) : children.slice(0, 2000);
 
   return (
     <div>
       <p>
         {text}
-        <button onClick={() => setCollapse(!collapse)}>{collapse ? "Read More" : "Read Less"}</button>
+        <div className="readmore-wrapper">
+          <button className="ReadMoreBtn" onClick={() => setCollapse(!collapse)}>
+            {collapse ? "Read More" : "Read Less"}
+          </button>
+        </div>
       </p>
     </div>
   );
